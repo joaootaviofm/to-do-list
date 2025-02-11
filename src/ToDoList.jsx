@@ -47,10 +47,12 @@ function ToDoList(){
                         <span className='text'>{task}</span>
                         <button className='pomodoroButton' onClick={() => pomodoroTask(index)}>Pomodoro</button>
                         <button className='removeButton' onClick={() => deleteTask(index)}>Remove</button>
+                        {pomodoro ? <Pomodoro task={task}/> : ""}
                     </li>
                 )}
             </ol>
-                {pomodoro ? <Pomodoro/> : ""}
+            
+                
             
         </div>
     )   

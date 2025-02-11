@@ -1,7 +1,7 @@
 import './Pomodoro.css'
 import { useState, useEffect } from 'react'
 
-function Pomodoro(){
+function Pomodoro(props){
 
     const [minutes,setMinutes] = useState(25)
     const [seconds, setSeconds] = useState(0)

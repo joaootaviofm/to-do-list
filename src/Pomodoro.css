@@ -1,10 +1,8 @@
 .pomodoro{
-    background-color: #9E3F3F;
-    text-align: center;
+    padding: 1rem;
+    background-color: #9e3f3f;
+    border-radius: 4px;
     font-weight: bold;
-    font-size: 4em;
-    color: white;
-    margin-top: 10px;
-    border-radius: 5px;
+    font-size: 2em;
+    border: 1px solid black;
 }
-
