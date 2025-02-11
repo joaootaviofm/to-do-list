@@ -5,6 +5,7 @@ function Pomodoro(props){
 
     const [minutes,setMinutes] = useState(25)
     const [seconds, setSeconds] = useState(0)
+    const [pause,setPause] = useState(true)
 
     const timerMinutes = minutes < 10 ? `0${minutes}` : minutes
     const timerSeconds = seconds < 10 ? `0${seconds}` : seconds
@@ -12,14 +13,17 @@ function Pomodoro(props){
     useEffect(() => {
         let interval = setInterval(() => {
             clearInterval(interval)
-
             if(seconds === 0){
                 if(minutes !== 0){
                     setSeconds(59)
                     setMinutes(minutes-1)
                 }else{
-                    setMinutes(25)
-                    setSeconds(0)
+                    let boolMinute = pause ? 4 : 24;
+                    let boolSecond = 59;
+
+                    setMinutes(boolMinute)
+                    setSeconds(boolSecond)
+                    setPause(!pause)
                 }
             }
             else{
@@ -31,6 +35,7 @@ function Pomodoro(props){
 
 return(<>
     <div className="pomodoro">
+        <p className='rest-msg'></p>
         <p>{timerMinutes}:{timerSeconds}</p>
     </div>
 </>)

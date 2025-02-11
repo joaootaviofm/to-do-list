@@ -6,8 +6,8 @@ function ToDoList(){
 
     const [newTask, setNewTask] = useState("")
     const [tasks, setTasks] = useState([])
-    const [pomodoro, setPomodoro] = useState(false)
-
+    const [activePomodoro, setActivePomodoro] = useState(null)
+    const [taskDone, setTaskDone] = useState(null)
 
     function handleInputChange(event){
         setNewTask(event.target.value)
@@ -22,6 +22,10 @@ function ToDoList(){
             setNewTask("")
         }
     }
+    
+    function pomodoroTask(index){
+        setActivePomodoro(index)
+    }
 
     function deleteTask(index){
         const updatedTasks = tasks.filter((_,i) => i != index)
@@ -29,10 +33,6 @@ function ToDoList(){
         setPomodoro(!pomodoro)
     }
 
-    function pomodoroTask(){
-        setPomodoro(!pomodoro)
-        console.log(pomodoro)
-    }
 
     return (
         <div className="container">
@@ -47,7 +47,8 @@ function ToDoList(){
                         <span className='text'>{task}</span>
                         <button className='pomodoroButton' onClick={() => pomodoroTask(index)}>Pomodoro</button>
                         <button className='removeButton' onClick={() => deleteTask(index)}>Remove</button>
-                        {pomodoro ? <Pomodoro task={task}/> : ""}
+                        {activePomodoro === index && <Pomodoro task={task}/>}
+                        
                     </li>
                 )}
             </ol>
