@@ -1,6 +1,6 @@
 import './ToDoList.css';
 import Pomodoro from './Pomodoro'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 function ToDoList(){
 
@@ -30,7 +30,9 @@ function ToDoList(){
     function deleteTask(index){
         const updatedTasks = tasks.filter((_,i) => i != index)
         setTasks(updatedTasks)
-        setPomodoro(!pomodoro)
+        if(activePomodoro === index){
+            setActivePomodoro(false)
+        }
     }
 
 
@@ -47,14 +49,10 @@ function ToDoList(){
                         <span className='text'>{task}</span>
                         <button className='pomodoroButton' onClick={() => pomodoroTask(index)}>Pomodoro</button>
                         <button className='removeButton' onClick={() => deleteTask(index)}>Remove</button>
-                        {activePomodoro === index && <Pomodoro task={task}/>}
-                        
+                        {activePomodoro === index && <Pomodoro task={task}/>}      
                     </li>
                 )}
             </ol>
-            
-                
-            
         </div>
     )   
 }
