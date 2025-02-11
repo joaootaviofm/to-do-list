@@ -25,14 +25,15 @@ function ToDoList(){
     
     function pomodoroTask(index){
         setActivePomodoro(index)
+        setTasks(updatedTasks)
     }
 
     function deleteTask(index){
         const updatedTasks = tasks.filter((_,i) => i != index)
-        setTasks(updatedTasks)
         if(activePomodoro === index){
             setActivePomodoro(false)
         }
+        setTasks(updatedTasks)
     }
 
 
