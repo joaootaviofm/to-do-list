@@ -1,12 +1,13 @@
 import './ToDoList.css';
 import Pomodoro from './Pomodoro'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 function ToDoList(){
 
     const [newTask, setNewTask] = useState("")
     const [tasks, setTasks] = useState([])
-    let completed = false;
+    const [pomodoro, setPomodoro] = useState(false)
+
 
     function handleInputChange(event){
         setNewTask(event.target.value)
@@ -25,10 +26,12 @@ function ToDoList(){
     function deleteTask(index){
         const updatedTasks = tasks.filter((_,i) => i != index)
         setTasks(updatedTasks)
+        setPomodoro(!pomodoro)
     }
 
-    function pomodoroTask(index){
-
+    function pomodoroTask(){
+        setPomodoro(!pomodoro)
+        console.log(pomodoro)
     }
 
     return (
@@ -47,7 +50,8 @@ function ToDoList(){
                     </li>
                 )}
             </ol>
-            <Pomodoro/>
+                {pomodoro ? <Pomodoro/> : ""}
+            
         </div>
     )   
 }

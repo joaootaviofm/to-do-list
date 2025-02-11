@@ -18,7 +18,8 @@ function Pomodoro(){
                     setSeconds(59)
                     setMinutes(minutes-1)
                 }else{
-                    //
+                    setMinutes(25)
+                    setSeconds(0)
                 }
             }
             else{
