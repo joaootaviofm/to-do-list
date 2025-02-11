@@ -30,6 +30,7 @@ function ToDoList(){
     function pomodoroTask(index){
 
     }
+
     return (
         <div className="container">
             <h1>To Do List</h1>
@@ -46,6 +47,7 @@ function ToDoList(){
                     </li>
                 )}
             </ol>
+            <Pomodoro/>
         </div>
     )   
 }
