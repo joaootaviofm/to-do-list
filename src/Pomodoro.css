@@ -1,13 +1,20 @@
 .pomodoro{
-    padding: .5rem;
+    padding: 1rem;
     background-color: #9e3f3f;
     border-radius: 4px;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 2em;
     border: 1px solid black;
     text-align: center;
 }
 
-.rest-msg{
-    font-size: .5em;
+.playButton{
+    border: none;
+    color: white;
+    background-color: hsl(0, 0%, 15%);
+    border: 1px solid hsl(0, 0%, 0%);
+}
+
+.playButton:hover{
+    opacity: .9;
 }

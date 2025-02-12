@@ -35,8 +35,8 @@ function Pomodoro(props){
 
 return(<>
     <div className="pomodoro">
-        <p className='rest-msg'></p>
         <p>{timerMinutes}:{timerSeconds}</p>
+        <button className='playButton'>Play song</button>
     </div>
 </>)
 
