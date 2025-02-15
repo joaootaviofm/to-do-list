@@ -10,7 +10,7 @@ Welcome to the **To do List**, a ToDoList with the extra option to pomodoro each
 
 ✅ Add task\
 ✅ Remove task\
-✅ Pomodoro task: User can start a **pomodoro count** for the task he is currently working\
+✅ Pomodoro task: User can start a **pomodoro count** for the task he is currently working
 
 ## 📸 Demo
 *Soon*
