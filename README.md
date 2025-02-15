@@ -1,8 +1,43 @@
-# React + Vite
+# 🔐 To Do List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the **To do List**, a ToDoList with the extra option to pomodoro each task to improve your time management
 
-Currently, two official plugins are available:
+## 🚀 Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[![My Skills](https://skillicons.dev/icons?i=js,react,css)](https://skillicons.dev)
+
+## 🎯 Features
+
+✅ Add task\
+✅ Remove task\
+✅ Pomodoro task: User can start a **pomodoro count** for the task he is currently working\
+
+## 📸 Demo
+*Soon*
+
+## 📦 How to Use
+
+1. Clone this repository:
+   ```sh
+   git clone https://github.com/joaootaviofm/to-do-list.git
+   ```
+2. Navigate to the project folder:
+   ```sh
+   cd react-to-do-list
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Start the project:
+   ```sh
+   npm run dev
+   ```
+
+## 👨‍💻 Contribution
+
+Contributions are welcome! Feel free to open an issue or submit a pull request.
+
+---
+
+Developed by [joaootaviofm](https://github.com/joaootaviofm)
