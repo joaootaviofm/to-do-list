@@ -1,4 +1,4 @@
-# 🔐 To Do List
+# 📝 To Do List
 
 Welcome to the **To do List**, a ToDoList with the extra option to pomodoro each task to improve your time management
 
